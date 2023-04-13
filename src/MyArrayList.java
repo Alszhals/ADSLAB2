@@ -1,8 +1,8 @@
-public class MyArrayList<T> {
+/*public class MyArrayList<T> {
     private T[] arr;
     private int size;
     public MyArrayList(){
-        arr=new int[5];
+        arr= int[5];
         size=0;
     }
     public void add(int value){
@@ -41,4 +41,4 @@ public class MyArrayList<T> {
 
 
 
-}
+}*/
