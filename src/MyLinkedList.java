@@ -160,8 +160,29 @@ public class MyLinkedList <T> implements MyList<T>{
 
     @Override
     public T get(int index) {
-        return null;
+        if (index < 0 || index >= size) throw new IndexOutOfBoundsException();
+
+        Node current;
+        int count;
+        if (index >= size / 2) {
+            current = tail;
+            count = size - 1;
+            while (count > index) {
+                current = current.prev;
+                count--;
+            }
+        } else {
+            current = head;
+            count = 0;
+            while (count < index) {
+                current = current.next;
+                count++;
+            }
+        }
+
+        return (T) current.element;
     }
+
 
     @Override
     public int indexOf(Object o) {
