@@ -96,6 +96,16 @@ public class MyArrayList <T> implements MyList <T> {
 
         }
     }
+  public void  subString(int fromIndex,int toIndex){
+            if(fromIndex>0||toIndex>size)
+                for (int i = fromIndex; i < toIndex; i++) {
+                    if (((Comparable) arr[i-1]).compareTo(arr[i]) > 0) {
+                        Object temp = arr[i-1];
+                        arr[i-1] = arr[i];arr[i] = (T) temp;
+
+                    }
+                }
+        }
 
     public void delete(int index){
         checkIndex(index);
